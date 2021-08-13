@@ -12,7 +12,7 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(rgb(39, 37, 139), white);
+    background-image: linear-gradient(white, rgb(107, 190, 211));
 }
 
 form {
@@ -27,10 +27,24 @@ h1 {
     margin-bottom: 10px;
 }
 
-input {
+input,
+select {
     width: 100%;
     margin-bottom: 10px;
     height: 30px;
+}
+
+.input-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+    gap: 10px;
+}
+
+.input-radio input {
+    width: 20px;
 }
 
 button {

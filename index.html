@@ -10,27 +10,33 @@
 </head>
 
 <body>
-    <form method="POST" action="./calculoDeDistancia.php">
+    <form method="POST" action="./calculo.php">
         <label for="nome">Nome do funcionário: </label>
-        <input type="nome" id="nome" name="nome">
-        <label for="salarioAtual">Salário atual: </label>
-        <input type="text" id="salario" name="salario" placeholder="R$">
-        <div>
+        <input type="nome" id="nome" name="nome" required>
+        <label for="salario">Salário atual: </label>
+        <input type="number" id="salario" name="salario" placeholder="R$" required>
+        <div class="input-radio">
             <p>Selecione seu Gênero:</p>
-            <input type="radio" name="genero" value="M">
+
             <label for="M">M</label>
-            <input type="radio" name="genero" value="F">
+            <input type="radio" id="masculino" name="genero" value="m" required>
+
             <label for="F">F</label>
-            <input type="radio" name="genero" value="outro">
+            <input type="radio" id="feminino" name="genero" value="f" required>
+
             <label for="outro">Outros</label>
+            <input type="radio" id="outro" name="genero" value="o" required>
+
+
         </div>
         <select name="cargo">
                 <option selected disabled value="">Selecione: </option>
-                <option name="auxiliar" >Auxiliar</option>
-                <option name="assistente">Assistente</option>
-                <option name="analista">Analista</option>
-                <option name="coordenador">Coodenador</option>
-                <option name="gerente">Gerente</option>
+                <option>Auxiliar</option>
+                <option>Assistente</option>
+                <option>Analista</option>
+                <option>Coodenador</option>
+                <option>Gerente</option>
+                <option>Diretor</option>
                 </select>
         <button>Salvar</button>
     </form>
